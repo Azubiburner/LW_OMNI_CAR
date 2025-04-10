@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test web</title>>
+    </head>
+    <body>
+        <script>
+            socket = new WebSocket("ws://localhost:8000")
+            socket.send("wichtig")
+            function test(message){
+                socket.send("wichtig")
+            }
+        </script>
+        <button onclick="test('hi')"></button>
+    </body>
+</html>

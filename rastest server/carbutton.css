@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    grid-template-rows: repeat(2, 1fr);   /* Zwei Zeilen */
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+.car-section {
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.camera-section {
+    width: 100%;
+    height: 120px; /* Einheitliche Höhe */
+    border-radius: 10px; /* Abgerundete Ecken */
+    background-color: #e3f2fd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Verhindert Verzerrungen */
+}
+.camera-section h2 {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+.car-button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.car-button.selected {
+    background-color: #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+}
+.controls {
+    position: relative;
+    width: 250px; /* Bewegungsbereich */
+    height: 250px;
+    margin-top: 15px;
+    background: radial-gradient(circle, #e3f2fd, #90caf9);
+    border-radius: 50%;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.controls button {
+    position: absolute;
+    width: 50px; /* Button-Größe */
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.controls button.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem; /* Größere Schrift */
+    width: 80px; /* Breiterer Button */
+    height: 80px; /* Höherer Button */
+    border-radius: 50%; /* Beibehaltung der runden Form */
+    padding: 10px; /* Zusätzlicher Innenabstand */
+}
+.forward { top: 10%; left: 50%; transform: translate(-50%, -50%); }
+.backward { bottom: 10%; left: 50%; transform: translate(-50%, 50%); }
+.left { left: 10%; top: 50%; transform: translate(-50%, -50%); }
+.right { right: 10%; top: 50%; transform: translate(50%, -50%); }
+.diagonal-left { top: 20%; left: 20%; transform: translate(-50%, -50%); }
+.diagonal-right { top: 20%; right: 20%; transform: translate(50%, -50%); }

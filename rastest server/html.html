@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Auto-Steuerung</title>
+    
+    <link rel="stylesheet" href="carbutton.css">
+    <script src="conn.js"></script>
+</head>
+
+<body>
+    
+    <div class="car-section" id="car1">
+        <div class="camera-section">
+            <h2>Kamera für Auto 1</h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car1')">Auto 1</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car1', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car1', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car1', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car1', 'left')">←</button>
+            <button class="center" onclick="followLine('car1')">⚫ Linie folgen</button>
+            <button class="right" onclick="move('car1', 'right')">→</button>
+            <button class="backward" onclick="move('car1', 'backward')">↓</button>
+        </div>
+    </div>
+
+    <div class="car-section" id="car2">
+        <div class="camera-section">
+            <h2>Kamera für Auto 2</h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car2')">Auto 2</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car2', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car2', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car2', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car2', 'left')">←</button>
+            <button class="center" onclick="followLine('car2')">⚫ Linie folgen</button>
+            <button class="right" onclick="move('car2', 'right')">→</button>
+            <button class="backward" onclick="move('car2', 'backward')">↓</button>
+        </div>
+    </div>
+
+    <div class="car-section" id="car3">
+        <div class="camera-section">
+            <h2>Kamera für Auto 3</h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car3')">Auto 3</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car3', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car3', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car3', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car3', 'left')">←</button>
+            <button class="center" onclick="followLine('car3')">⚫ Linie folgen</button>
+            <button class="right" onclick="move('car3', 'right')">→</button>
+            <button class="backward" onclick="move('car3', 'backward')">↓</button>
+        </div>
+    </div>
+
+    <div class="car-section" id="car4">
+        <div class="camera-section">
+            <h2>Kamera für Auto 4</h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car4')">Auto 4</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car4', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car4', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car4', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car4', 'left')">←</button>
+            <button class="center" onclick="followLine('car4')">⚫ Linie folgen</button>
+            <button class="right" onclick="move('car4', 'right')">→</button>
+            <button class="backward" onclick="move('car4', 'backward')">↓</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
