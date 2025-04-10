@@ -38,9 +38,9 @@ def suche_ne_line():
                 kit.motor2.throttle = 0.8
                 kit.motor3.throttle = -0.8
                 kit.motor4.throttle = 0.8
-                time.sleep(suchzeit+suchzeit*0.1)
+                time.sleep(suchzeit)
                 suchzeit = suchzeit*2
-                if suchzeit >= 4:
+                if suchzeit >= 6:
                         GPIO.setup(SENSOR, GPIO.IN)
                         kit.motor1.throttle = 0.8
                         kit.motor2.throttle = -0.8
@@ -53,7 +53,7 @@ def suche_ne_line():
                         kit.motor2.throttle = 0.8
                         kit.motor3.throttle = -0.8
                         kit.motor4.throttle = 0.8
-                        time.sleep(0.2)
+                        time.sleep(0.1)
                         zieh_ne_line()
                 
                 if (GPIO.input(SENSOR)):
@@ -65,7 +65,7 @@ def suche_ne_line():
                 kit.motor4.throttle = -0.8
                 time.sleep(suchzeit)
                 suchzeit = suchzeit*2
-                if suchzeit >= 4:
+                if suchzeit >= 6:
                         GPIO.setup(SENSOR, GPIO.IN)
                         kit.motor1.throttle = -0.8
                         kit.motor2.throttle = 0.8
@@ -78,29 +78,23 @@ def suche_ne_line():
                         kit.motor2.throttle = -0.8
                         kit.motor3.throttle = 0.8
                         kit.motor4.throttle = -0.8
-                        time.sleep(0.2)
+                        time.sleep(0.1)
                         zieh_ne_line()                     
 
 def licht_fahrt():
         global leds
         while (GPIO.input(SENSOR)):
-                print("lichtan")
-                for i in range(LED_COUNT):
-                        print("for1") 
+                for i in range(LED_COUNT): 
                         leds.setPixelColor(i, Color(0, 0, 255)) 
                 leds.show()
                 time.sleep(0.2)
         else:
-                print("line suchen1")
                 for i in range(LED_COUNT):
                         leds.setPixelColor(i, Color(0, 255, 0))  
-                        print("for2") 
                 leds.show()
                 time.sleep(0.2)
-                print("line scuhen2") 
                 for i in range(LED_COUNT):
                         leds.setPixelColor(i, Color(0, 0, 255))
-                        print("for3")   
                 leds.show()
                 time.sleep(0.2) 
                 licht_fahrt()
