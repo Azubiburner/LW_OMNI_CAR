@@ -23,8 +23,6 @@ kit.motor2.throttle = 0
 kit.motor3.throttle = 0
 kit.motor4.throttle = 0
 
-S = 1.0  # Geschwindigkeit
-
 def are_motors_active():
     if kit.motor1.throttle != 0 or kit.motor2.throttle != 0 or kit.motor3.throttle != 0 or kit.motor4.throttle != 0:
         return True
