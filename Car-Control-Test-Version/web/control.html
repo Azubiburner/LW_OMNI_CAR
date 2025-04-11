@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Steuerung</title>
+    <link rel="stylesheet" href="carbutton.css">
+    <script src="conn.js"></script>
+</head>
+
+<body>
+    <!-- Car 1 -->
+    <div class="car-section" id="car1">
+        <div class="camera-section">
+            <div class="live-symbol">LIVE</div>
+            <h2><iframe id="camera1" width="560" height="315" src="http://server:8889/stream/omni01" frameborder="0" allow="autoplay" allowfullscreen></iframe></h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car1')">Start</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car1', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car1', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car1', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car1', 'left')">←</button>
+            <button class="center" onclick="move('car1', 'stop')">STOP!</button>
+            <button class="right" onclick="move('car1', 'right')">→</button>
+            <button class="backward" onclick="move('car1', 'backward')">↓</button>
+            <button class="diagonal-down-left" onclick="move('car1', 'diagonal-down-left')">↙</button>
+            <button class="diagonal-down-right" onclick="move('car1', 'diagonal-down-right')">↘</button>
+        </div>
+        <div class="turn-controls">
+            <button class="rotate-left" onclick="move('car1', 'turn-left')">↻</button>
+            <button class="rotate-right" onclick="move('car1', 'turn-right')">↺</button>
+        </div>
+        <div class="action-buttons">
+            <button class="findline" onclick="move('car1', 'findline')">Follow Line</button>
+            <button class="lab" onclick="move('car1', 'lab')">Labyrinth</button>
+        </div>
+    </div>
+
+    <!-- Repeat for other cars -->
+    <!-- Car 2 -->
+    <div class="car-section" id="car2">
+        <div class="camera-section">
+            <div class="live-symbol">LIVE</div>
+            <h2><iframe id="camera2" width="560" height="315" src="http://server:8889/stream/omni02" frameborder="0" allow="autoplay" allowfullscreen></iframe></h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car2')">Start</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car2', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car2', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car2', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car2', 'left')">←</button>
+            <button class="center" onclick="move('car2', 'stop')">STOP!</button>
+            <button class="right" onclick="move('car2', 'right')">→</button>
+            <button class="backward" onclick="move('car2', 'backward')">↓</button>
+            <button class="diagonal-down-left" onclick="move('car2', 'diagonal-down-left')">↙</button>
+            <button class="diagonal-down-right" onclick="move('car2', 'diagonal-down-right')">↘</button>
+        </div>
+        <div class="turn-controls">
+            <button class="rotate-left" onclick="move('car2', 'turn-left')">↻</button>
+            <button class="rotate-right" onclick="move('car2', 'turn-right')">↺</button>
+        </div>
+        <div class="action-buttons">
+            <button class="findline" onclick="move('car2', 'findline')">Follow Line</button>
+            <button class="lab" onclick="move('car2', 'lab')">Labyrinth</button>
+        </div>
+    </div>
+
+    <!-- Car 3 -->
+    <div class="car-section" id="car3">
+        <div class="camera-section">
+            <div class="live-symbol">LIVE</div>
+            <h2><iframe id="camera3" width="560" height="315" src="http://server:8889/stream/omni03" frameborder="0" allow="autoplay" allowfullscreen></iframe></h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car3')">Start</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car3', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car3', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car3', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car3', 'left')">←</button>
+            <button class="center" onclick="move('car3', 'stop')">STOP!</button>
+            <button class="right" onclick="move('car3', 'right')">→</button>
+            <button class="backward" onclick="move('car3', 'backward')">↓</button>
+            <button class="diagonal-down-left" onclick="move('car3', 'diagonal-down-left')">↙</button>
+            <button class="diagonal-down-right" onclick="move('car3', 'diagonal-down-right')">↘</button>
+        </div>
+        <div class="turn-controls">
+            <button class="rotate-left" onclick="move('car3', 'turn-left')">↻</button>
+            <button class="rotate-right" onclick="move('car3', 'turn-right')">↺</button>
+        </div>
+        <div class="action-buttons">
+            <button class="findline" onclick="move('car3', 'findline')">Follow Line</button>
+            <button class="lab" onclick="move('car3', 'lab')">Labyrinth</button>
+        </div>
+    </div>
+
+    <!-- Car 4 -->
+    <div class="car-section" id="car4">
+        <div class="camera-section">
+            <div class="live-symbol">LIVE</div>
+            <h2><iframe id="camera4" width="560" height="315" src="http://server:8889/stream/omni04" frameborder="0" allow="autoplay" allowfullscreen></iframe></h2>
+        </div>
+        <button class="car-button" onclick="selectCar('car4')">Start</button>
+        <div class="controls">
+            <button class="diagonal-left" onclick="move('car4', 'diagonal-left')">↖</button>
+            <button class="forward" onclick="move('car4', 'forward')">↑</button>
+            <button class="diagonal-right" onclick="move('car4', 'diagonal-right')">↗</button>
+            <button class="left" onclick="move('car4', 'left')">←</button>
+            <button class="center" onclick="move('car4', 'stop')">STOP!</button>
+            <button class="right" onclick="move('car4', 'right')">→</button>
+            <button class="backward" onclick="move('car4', 'backward')">↓</button>
+            <button class="diagonal-down-left" onclick="move('car4', 'diagonal-down-left')">↙</button>
+            <button class="diagonal-down-right" onclick="move('car4', 'diagonal-down-right')">↘</button>
+        </div>
+        <div class="turn-controls">
+            <button class="rotate-left" onclick="move('car4', 'turn-left')">↻</button>
+            <button class="rotate-right" onclick="move('car4', 'turn-right')">↺</button>
+        </div>
+        <div class="action-buttons">
+            <button class="findline" onclick="move('car4', 'findline')">Follow Line</button>
+            <button class="lab" onclick="move('car4', 'lab')">Labyrinth</button>
+        </div>
+    </div>
+</body>
+</html>
